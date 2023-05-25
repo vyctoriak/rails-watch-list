@@ -1,0 +1,18 @@
+<div>
+    <h1>Lists</h1>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>More Info</th>
+        </tr>
+        <% @lists.each do |list| %>
+            <tr>
+                <td><%= list.name %></td>
+                <td><%= link_to "More Info", list_path(list) %></td>
+            </tr>
+        <% end %>
+    </table>
+
+    <%= link_to "New List" , new_list_path %>
+</div>
