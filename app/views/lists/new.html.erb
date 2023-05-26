@@ -1,5 +1,12 @@
-<h1>Create a new list</h1>
+<div class="container card my-5">
+    <h1>Create a new list</h1>
 
-<render 'form' %>
+    <%= simple_form_for [@list], html: { class: 'd-flex flex-column align-items-start'} do |f| %>
+        <%= f.label :name, label: 'How do you want to call the new list?' %>
+        <%= f.text_field :name, class: 'mb-2 w-100' %>
+        <%= f.submit class: 'btn btn-primary w-100' %>
+    <% end %>
 
-<%= link_to 'Back to the list', lists_path %>
+    <%= link_to 'Back to the list', lists_path, class: "btn bg-black text-white my-2" %>
+
+</div>

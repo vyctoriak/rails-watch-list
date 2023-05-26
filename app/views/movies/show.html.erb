@@ -1,8 +1,0 @@
-<div class="container">
-    <h1> Movie: <%= @movie[:title] %> </h1>
-    <p> Rating: <%= @movie[:rating] %> </p>
-    <p> Overview: <%= @movie[:overview] %> </p>
-    <img class="my-2" src="<%= @movie[:poster_url] %>" alt="poster" width="200">
-    </br>
-    <%= link_to "Back to list", movies_path, class: "btn btn-primary" %>
-</div>

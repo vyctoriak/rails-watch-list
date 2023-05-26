@@ -4,13 +4,14 @@
     <tr>
         <th>Title</th>
         <th>Rating</th>
-        <th>More Info</th>
+        <th>Add to a list</th>
     </tr>
     <% @movies.each do |movie| %>
         <tr>
             <td><%= movie.title %></td>
             <td><%= movie.rating %></td>
-            <td><%= link_to "More Info", movie_path(movie) %></td>
         </tr>
     <% end %>
 </table>
+
+<h1>Movies</h1>

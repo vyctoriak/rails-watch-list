@@ -1,0 +1,17 @@
+<div class="container my-4">
+    <h1 class="fw-bold">Movies list</h1>
+
+    <h4>Add a movie to your <em><strong><%= @list.name %></strong></em> list</h4>
+
+    <div class="bg-white rounded p-3 shadow">
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+            <%= f.input :comment, label: 'Do you have something to say about this movie?', placeholder: 'Enter a comment about the movie' %>
+            <%= f.association :movie, label: 'Select the movie', prompt: 'Choose one' %>
+            <%= f.submit 'Add movie +', class: 'btn btn-primary' %>
+        <% end %>
+
+        <p>
+            <%= link_to '<i class="fas fa-chevron-left"></i> Back to movie list'.html_safe, list_path(@list), class: 'btn bg-black text-white my-1' %>
+        </p>
+    </div>
+</div>
