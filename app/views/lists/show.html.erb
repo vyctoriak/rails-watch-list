@@ -10,7 +10,7 @@
     <span class="mb-2 d-block text-uppercase"><em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em></span>
     <div>
       <%= link_to 'Add a movie to your list 🎬', new_list_bookmark_path(@list), class: 'btn btn-primary' %>
-      <%= link_to 'Delete this list ⚠️', list_path(@list), class: 'btn btn-danger text-white', data: { turbo_confirm: "Are you sure you want to delete the list '#{@list.name}' ?", turbo_method: :delete } %>
+      <%= link_to 'Delete this list ⚠️', list_path(@list), data: { turbo_confirm: "Are you sure you want to delete the list '#{@list.name}' ?", turbo_method: :delete }, class: 'btn btn-danger text-white' %>
     </div>
   </div>
 
